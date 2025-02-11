@@ -3,32 +3,37 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html{
+    height: 100vh;
+}
 body {
   font-size: 20px;
   font-family: "Inconsolata", serif;
-  background-image: url(./assets/images/background-desktop.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: 
+  url(./assets/images/pattern-lines.svg),
+  url(./assets/images/background-desktop.png);
+  background-size: cover cover;
+  background-position: center center;
+  background-repeat: repeat no-repeat;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
+  overflow: hidden;
 }
 /* header styling */
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px;
+  margin: 30px 0 0 0;
 }
 /* title section styling */
 #Title {
-    margin: 30px;
+  margin: 30px 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,19 +46,33 @@ header {
   text-align: center;
   color: hsl(252, 6%, 83%);
   width: 70%;
-  margin: 30px;
+  margin: 0px;
 }
 
 #Title p {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 1px;
-  margin: 30px;
+  margin: 20px;
   text-align: center;
   color: hsl(252, 6%, 83%);
   width: 100%;
 }
-
+.top-right-img{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.bottom-left-img{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.circle-pattern-img{
+    position: fixed;
+    top: 42%;
+    right: 27.5%;
+}
 /* form styling */
 #form{
     margin: 30px;
@@ -62,36 +81,55 @@ header {
     justify-content: center;
     align-items: center;
 }
-#form #avatar{
-    height: 150px;
+.image-input{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 120px;
+    border-spacing: 10px;
     border-style: dashed;
-    border-color: hsl(252, 6%, 83%);
+    border-color: hsl(245, 15%, 58%);
+    border-radius: 10px;
+}
+.image-input img{
+    position: absolute;
+    left: 44%;
+    margin-bottom: 30px;
+    height: 40px;
+    border-style: solid;
+    border-color: hsl(245, 15%, 58%);
+    border-radius: 10px;
+    background-color: rgba(135, 132, 164,0.3);
 }
 #form label{
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: 1px;
-    
+    letter-spacing: 1px;  
     text-align: center;
     color: hsl(252, 6%, 83%);
     width: 100%;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 #form input{
     padding: 10px;
-    margin: 30px 0;
+    margin: 0 0 20px 0;
     width: 500px;
-    height: 100px;
+    height: 50px;
     border: none;
     border-radius: 10px;
-    
     font-size: 20px;
     background-color: rgba(135, 132, 164,0.3);
     color: white;
 }
 #form span{
-    margin-bottom: 20px;
+    margin-top: 20px;
     color: hsl(252, 6%, 83%);
 }
 #form button{
@@ -129,7 +167,7 @@ header {
 .Ticket-image{
     width: 500px;
     height: 250px;
-    margin-bottom: 30px;
+    margin: 30px;
     background: url(./assets/images/pattern-ticket.svg) no-repeat center / cover; 
     border:hsl(7, 88%, 67%);
     display: flex;
@@ -137,6 +175,14 @@ header {
     justify-content: space-between;
     
     /* background-color: hsl(252, 6%, 83%); */
+}
+#Title{
+    margin: 30px;
+}
+#Title .gradient-text{
+    background:linear-gradient(45deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #Title p{
     font-size: 20px;
@@ -148,13 +194,34 @@ header {
 
 .Ticket-image .header-part{
     margin: 30px;
+    position: relative;
+    color: hsl(245, 15%, 58%);
+}
+.Ticket-image .header-part p{
+    position: absolute;
+    left: 10%;
+    margin-top: 10px;
 }
 
 .Ticket-image .Avatar-part{
     margin: 30px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    display: flex;
+    justify-content: flex-start;
 }
 .Ticket-image .Avatar-part img{
-   float: left;
-   margin-right: 20px;
    border-radius: 5px;
+   margin-top: 30px;
+}
+.Ticket-image .Avatar-part p{
+    margin: 27px;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+.Ticket-image .Avatar-part p span{
+
+    color: hsl(245, 15%, 58%);
+
 }
