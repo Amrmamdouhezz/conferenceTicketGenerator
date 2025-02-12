@@ -95,6 +95,7 @@ header {
     border-style: dashed;
     border-color: hsl(245, 15%, 58%);
     border-radius: 10px;
+    background-color: rgba(135, 132, 164,0.3);
 }
 .image-input img{
     position: absolute;

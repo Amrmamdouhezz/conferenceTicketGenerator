@@ -39,7 +39,7 @@
         <label for="avatar">
           <img src="./assets/images/icon-upload.svg" alt="Upload Image" style="cursor: pointer" />
         </label>
-        <input type="file" id="avatar" accept="image/jpeg, image/png" style="display: none" />
+        <input type="file" id="avatar" accept="image/jpeg, image/png" style="display: none" required/>
         <span>Drag and drop or click to upload</span>
       </div>
 
@@ -53,7 +53,7 @@
       <label for="githubUsername">GitHub Username</label>
       <input type="text" id="githubUsername" name="githubUsername" required />
 
-      <button type="submit">Generate My Ticket</button>
+      <button type="submit" id="submit_btn">Generate My Ticket</button>
     </form>
   </section>
   <!-- Form ends -->
